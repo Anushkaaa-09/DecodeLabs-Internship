@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#e8f0ff;
+    transition:0.4s;
+    padding:20px;
+}
+
+.container{
+    text-align:center;
+    padding:25px;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 16px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-left:5px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.game-board{
+    display:grid;
+    grid-template-columns:repeat(4,90px);
+    gap:12px;
+    justify-content:center;
+}
+
+.card{
+    width:90px;
+    height:90px;
+    background:#3b82f6;
+    color:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    border-radius:8px;
+    cursor:pointer;
+    user-select:none;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card.flipped{
+    background:white;
+    color:black;
+}
+
+.card.matched{
+    background:#22c55e;
+    color:white;
+    cursor:default;
+}
+
+#status{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#message{
+    margin-top:10px;
+    font-size:22px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+/* DARK MODE */
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark .container{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark .card{
+    background:#444;
+}
+
+.dark .card.flipped{
+    background:white;
+    color:black;
+}
+
+.dark .card.matched{
+    background:#22c55e;
+}
+
+.dark button{
+    background:#333;
+    color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:500px){
+
+    .game-board{
+        grid-template-columns:repeat(4,70px);
+        gap:8px;
+    }
+
+    .card{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+
+    .stats{
+        flex-direction:column;
+    }
+}
