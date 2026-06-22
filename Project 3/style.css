@@ -67,6 +67,7 @@ button:hover{
     font-size:35px;
     border-radius:8px;
     cursor:pointer;
+    -webkit-user-select:none;
     user-select:none;
     transition:0.3s;
 }
